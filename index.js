@@ -26,7 +26,7 @@ const filteredNumbers=numbers.filter((z)=> z>10);
 console.log(filteredNumbers);
 
 
-let Age=parseInt(prompt("Enter the age you want to compare :"))
+let Age=parseInt(prompt("Enter the age you want to compare :"));
 
 const studentInfo =[
     {
@@ -46,11 +46,37 @@ const studentInfo =[
     }
 
 ];
-console.log(studentInfo.age);
+
 
 const studentName=studentInfo.filter(function(x){
     return x.age>Age;
 }).map(function(y){
     return y.name ;
 });
+
 console.log(studentName);
+
+// using arrow function
+
+const StudentInfo =[
+    {
+        name : "mehedi",
+        roll :21,
+        cgpa :2.12
+    },
+    {
+        name : "sakib",
+        roll :22,
+        cgpa :1.71
+    },
+    {
+        name : "kopil",
+        roll :23,
+        cgpa :3.32
+    }
+];
+
+let Cg=parseFloat(prompt("Enter the CGPA you want to compare :"));
+
+const StudentName=StudentInfo.filter((x)=> x.cgpa>Cg).map((y)=> y.name);
+console.log(StudentName);
